@@ -1,0 +1,23 @@
+{
+    "name": "url-shortner",
+    "version": "1.0.0",
+    "description": "Shortens any given url",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Ansh-Kumar/url-shortner.git"
+    },
+    "author": "Ansh Kumar",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Ansh-Kumar/url-shortner/issues"
+    },
+    "homepage": "https://github.com/Ansh-Kumar/url-shortner#readme",
+    "dependencies": {
+        "pg": "^8.11.3"
+    },
+    "type": "module"
+}
