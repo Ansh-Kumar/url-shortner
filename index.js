@@ -25,13 +25,11 @@ async function getAll() {
 function generateRandomKey() {
     const maxLength = 8;
 
-    // Define characters to choose from for the key
     const characters =
         "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
     let key = "";
 
-    // Generate random key with the chosen length
     for (let i = 0; i < maxLength; i++) {
         const randomIndex = Math.floor(Math.random() * characters.length);
         key += characters.charAt(randomIndex);
