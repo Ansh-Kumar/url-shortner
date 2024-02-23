@@ -44,7 +44,15 @@ async function createShortUrl(long_url) {
     if (inDb) {
         return inDb["key"];
     }
-    const key = generateRandomKey();
+    let key;
+    let check = false;
+    while (!check) {
+        key = generateRandomKey();
+        let result = await client.query(
+            `SELECT key FROM urls WHERE key = '${key}'`
+        );
+        check = result.rows.length == 0;
+    }
     const query = {
         text: "INSERT INTO urls (long_url, key, expr_date) VALUES ($1, $2, $3)",
         values: [long_url, key, expr_date],
